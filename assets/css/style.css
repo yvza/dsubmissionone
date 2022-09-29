@@ -9,9 +9,13 @@
     --color-sunglow: #FACA1F;
 }
 
-html {
+* {
     box-sizing: border-box;
+}
+
+html {
     font-family: 'Open Sans', sans-serif;
+    color: var(--color-jet);
 }
 
 body {
@@ -63,7 +67,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     margin-top: 20px;
+    min-height: 54px;
 }
 
 .list-wrapper {
@@ -86,10 +92,75 @@ body {
     cursor: pointer;
 }
 
+.dropdown::before {
+    content: '';
+    background: linear-gradient(to right,#ff6540,#f6c81d);
+    height: 0.4em;
+    top: -0.4em;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.dropdown {
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    left: 0;
+    top: 3.757em;
+    background: var(--color-sunglow);
+    visibility: hidden;
+    padding: 20px;
+}
+
+.dropdown:hover {
+    cursor: auto;
+}
+
+ul {
+    margin: 0;
+}
+
+ul li {
+    height: 54px;
+    padding-top: 17px;
+}
+
+ul li a:link {
+    color: var(--color-jet);
+}
+
+ul li:hover .dropdown {
+    visibility: visible;
+}
+
+ul li:hover a, ul li:hover i {
+    color: var(--color-cgred);
+}
+
+ul li a {
+    color: var(--color-jet);
+    text-decoration: none;
+}
+
+ul li a:hover i {
+    color: var(--color-cgred);
+}
+
 nav {
     display: flex;
     align-items: center;
 }
+
+/* nav ul {
+    margin: 0;
+}
+
+nav ul li {
+    height: 53.71px;
+} */
 
 .other-nav:hover {
     cursor: pointer;
@@ -126,21 +197,42 @@ article {
 .social-media-wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-footer {
-    padding-top: 40px;
+.social-media-wrapper > svg:hover {
+    cursor: pointer;
+}
+
+footer, footer p:nth-of-type(2) {
+    padding-top: 70px;
 }
 
 footer > p {
     font-size: 1.8rem;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
-.social-media-wrapper > svg {
-    width: 80px;
-    height: 80px;
-    color: var(--color-jet);
-    cursor: pointer;
+.video-wrapper {
+    display: flex;
+}
+
+.video-wrapper > div {
+    flex: 1;
+    margin: 5px;
+    background: var(--color-sunglow);
+    position: relative;
+}
+
+.video-wrapper > div::after {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-left: 40px solid var(--color-jet);
+    border-bottom: 25px solid transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .social-media-wrapper > svg:not(:first-child) {
@@ -174,6 +266,6 @@ footer > p {
     align-items: center;
 }
 
-a:link {
+a:link, a:hover, a:active {
     color: var(--color-cgred);
 }
