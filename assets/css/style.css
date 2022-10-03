@@ -20,6 +20,13 @@ html {
 
 body {
     background: var(--color-white);
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    margin-top: 10px;
 }
 
 .container {
@@ -222,6 +229,13 @@ ul > li:not(:first-child) {
     padding-left: 20px;
 }
 
+.overlay-menu {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    top: -10px;
+    left: 0;
+}
+
 .main-size {
     width: var(--main-size);
     margin: 20px auto 0 auto;
@@ -240,6 +254,29 @@ article {
     background: var(--color-cgred);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+aside {
+    margin: 0;
+    padding: 0;
+}
+
+aside > .left {
+    content: url('../imgs/aside-left.png');
+    width: 393px;
+    height: 614px;
+    left: -15px;
+    bottom: 0;
+    position: absolute;
+}
+
+aside > .right {
+    content: url('../imgs/aside-right.png');
+    width: 393px;
+    height: 634px;
+    right: -15px;
+    bottom: 0;
+    position: absolute;
 }
 
 .social-media-wrapper {
