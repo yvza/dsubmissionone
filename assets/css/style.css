@@ -23,6 +23,7 @@ body {
 }
 
 .container {
+    position: relative;
     width: var(--container-size);
     margin: 0 auto;
     border-radius: 1rem;
@@ -134,6 +135,56 @@ ul li a:link {
 
 ul li:hover .dropdown {
     visibility: visible;
+    animation: rotateMenu 400ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes rotateMenu {
+    0% {
+        transform: rotateX(-90deg);
+    }
+    70% {
+        transform: rotateX(20deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+@-moz-keyframes rotateMenu {
+    0% {
+        transform: rotate(-90deg);
+    }
+    70% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes rotateMenu {
+    0% {
+        transform: rotate(-90deg);
+    }
+    70% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@-o-keyframes rotateMenu {
+    0% {
+        transform: rotateX(-90deg);
+    }
+    70% {
+        transform: rotateX(20deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
 }
 
 ul li:hover a, ul li:hover i {
@@ -153,14 +204,6 @@ nav {
     display: flex;
     align-items: center;
 }
-
-/* nav ul {
-    margin: 0;
-}
-
-nav ul li {
-    height: 53.71px;
-} */
 
 .other-nav:hover {
     cursor: pointer;
@@ -186,12 +229,17 @@ ul > li:not(:first-child) {
 
 .banner {
     height: 670px;
-    background: var(--color-cgred);
+    background: url('../imgs/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 article {
     height: 670px;
-    background: var(--color-lightgray);
+    background: var(--color-cgred);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .social-media-wrapper {
