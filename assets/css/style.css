@@ -56,6 +56,15 @@ header {
     font-size: 1.5rem;
 }
 
+.other-information > p > a {
+    text-decoration: none;
+    color: var(--color-jet);
+}
+
+.other-information > p > a:hover {
+    color: var(--color-cgred);
+}
+
 .other-information > p > i, ul > li > i {
     color: var(--color-cgred);
 }
