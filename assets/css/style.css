@@ -272,7 +272,6 @@ ul > li:not(:first-child) {
 
 .overlay-menu .navigator i:hover:before {
     color: var(--color-cgred);
-    /* display: inline-block; */
 }
 
 .overlay-menu ul {
