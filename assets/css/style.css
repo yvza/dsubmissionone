@@ -152,7 +152,7 @@ ul li a:link {
 
 ul li:hover .dropdown {
     visibility: visible;
-    animation: rotateMenu 400ms ease-in-out forwards;
+    animation: rotateMenu 1s ease-in-out forwards;
     transform-origin: top center;
 }
 
