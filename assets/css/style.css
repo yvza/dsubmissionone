@@ -231,9 +231,78 @@ ul > li:not(:first-child) {
 
 .overlay-menu {
     position: absolute;
-    background: rgba(0, 0, 0, 0.7);
-    top: -10px;
+    background: rgba(0, 0, 0, 0.95);
     left: 0;
+    width: -webkit-fill-available;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.overlay-menu, .overlay-menu .navigator i {
+    top: -10px;
+}
+
+.overlay-menu .navigator i {
+    position: absolute;
+    right: 0;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.82);
+    transition: transform .8s ease-in-out;
+}
+
+.overlay-menu .navigator i:hover {
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+
+.overlay-menu .navigator i:hover:before {
+    color: var(--color-cgred);
+    /* display: inline-block; */
+}
+
+.overlay-menu ul {
+    padding: 0;
+}
+
+.overlay-menu ul li {
+    display: block;
+    padding: 0;
+    font-size: 4rem;
+}
+
+.overlay-menu ul li a {
+    color: rgba(255, 255, 255, 0.82);
+    position: relative;
+}
+
+.overlay-menu ul li a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-cgred);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.overlay-menu ul li a:hover{
+    color: var(--color-cgred);
+}
+
+.overlay-menu ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.overlay-menu ul li:not(:first-child) {
+    margin-top: 100px;
 }
 
 .main-size {
@@ -242,8 +311,11 @@ ul > li:not(:first-child) {
 }
 
 .banner {
-    height: 670px;
-    background: url('../imgs/bg.jpg') no-repeat center center fixed;
+    min-height: 942px;
+    background-image: url('../imgs/bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
