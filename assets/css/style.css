@@ -240,6 +240,7 @@ ul > li:not(:first-child) {
     align-items: center;
     justify-content: center;
     font-family: 'Open Sans Condensed', sans-serif;
+    visibility: hidden;
 }
 
 .overlay-menu, .overlay-menu .navigator i {
@@ -340,6 +341,7 @@ aside > .left {
     left: -15px;
     bottom: 0;
     position: absolute;
+    visibility: hidden;
 }
 
 aside > .right {
@@ -349,6 +351,7 @@ aside > .right {
     right: -15px;
     bottom: 0;
     position: absolute;
+    visibility: hidden;
 }
 
 .social-media-wrapper {
@@ -425,4 +428,10 @@ footer > p {
 
 a:link, a:hover, a:active {
     color: var(--color-cgred);
+}
+
+@media only screen and (min-width: 1920px) {
+    aside > .left, aside > .right {
+        visibility: visible;
+    }
 }
