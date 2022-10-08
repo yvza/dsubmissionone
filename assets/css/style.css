@@ -182,10 +182,14 @@ header {
 .ig-showcase-overlay h5 a {
     color: var(--color-white);
     margin-top: -20px;
+    display: inline-block;
+    padding: 5px;
+    background: transparent;
 }
 
 .ig-showcase-overlay h5 a:hover {
     color: var(--color-cgred);
+    background: var(--color-white);
 }
 
 .dropdown .ig-showcase:hover .ig-showcase-overlay {
