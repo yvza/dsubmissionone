@@ -124,17 +124,89 @@ header {
 
 .dropdown {
     position: absolute;
-    height: 300px;
     width: 100%;
     left: 0;
     top: 3.757em;
     background: var(--color-sunglow);
     visibility: hidden;
     padding: 20px;
+    display: flex;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .dropdown:hover {
     cursor: auto;
+}
+
+.dropdown .ig-showcase {
+    flex: 1;
+    margin: 15px;
+    background: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 345px;
+    position: relative;
+}
+
+.ig-showcase-overlay {
+    visibility: hidden;
+    width: 293px;
+    height: 293px;
+    background: rgba(0, 0, 0, 0.0);
+    position: absolute;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 15%;
+}
+
+.ig-showcase-overlay .img {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.ig-showcase-overlay .img img {
+    width:100px;
+    height:100px;
+}
+
+.ig-showcase-overlay h5 {
+    color: var(--color-white);
+}
+
+.ig-showcase-overlay h5 a {
+    color: var(--color-white);
+    margin-top: -20px;
+}
+
+.ig-showcase-overlay h5 a:hover {
+    color: var(--color-cgred);
+}
+
+.dropdown .ig-showcase:hover .ig-showcase-overlay {
+    visibility: visible;
+    animation: slowDownBackground 5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-fill-mode: forwards;
+}
+
+@keyframes slowDownBackground {
+    from { background: rgba(0, 0, 0, 0.0); }
+    to { background: rgba(0, 0, 0, 0.5); }
+}
+
+.dropdown .ig-showcase > img {
+    width: 293px;
+    height: 293px;
+}
+
+.dropdown .ig-showcase, .dropdown .ig-showcase img {
+    border-radius: 15px;
 }
 
 ul {
@@ -204,7 +276,7 @@ ul li:hover .dropdown {
     }
 }
 
-ul li:hover a, ul li:hover i {
+ul li:hover > a, ul li:hover i {
     color: var(--color-cgred);
 }
 
