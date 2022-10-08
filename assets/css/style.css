@@ -26,10 +26,6 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    margin-top: 10px;
-}
-
 .container {
     position: relative;
     width: var(--container-size);
@@ -330,7 +326,7 @@ ul > li:not(:first-child) {
 }
 
 .overlay-menu, .overlay-menu .navigator i {
-    top: -10px;
+    top: 0;
 }
 
 .overlay-menu .navigator i {
@@ -521,6 +517,64 @@ article .wrapper a:hover .content {
 aside {
     margin: 0;
     padding: 0;
+}
+
+aside.overlay-identity {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    color: var(--color-white);
+    background: var(--color-cgred);
+    display: flex;
+    width: 150px;
+    right: -60px;
+}
+
+aside.show-me {
+    position: absolute;
+    top: 82.17px;
+    right: 50px;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    opacity: 0;
+    width: 160px;
+    visibility: hidden;
+}
+
+aside.show-me h5 {
+    color: var(--color-jet);
+}
+
+aside.overlay-identity:hover aside.show-me {
+    visibility: visible;
+    opacity: 1;
+    animation-name: opacityFadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 500ms;
+}
+
+@keyframes opacityFadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+aside.show-me img {
+    width: 80px;
+    height: 95px;
+}
+
+aside.overlay-identity:hover {
+    cursor: pointer;
+}
+
+aside.overlay-identity h5 {
+    margin-bottom: 0;
 }
 
 aside > .left {
