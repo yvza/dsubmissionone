@@ -1,3 +1,6 @@
+# Notion Log
+https://sugared-flock-610.notion.site/Submission-Tugas-Akhir-Membuat-Website-5b00233bebd64764add08b186b4d6da5
+
 # Redesign Web Portal Pemerintah Kota Mojokerto
 
 Origin url: https://mojokertokota.go.id/
